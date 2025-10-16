@@ -1,6 +1,6 @@
 {
   "name": "adk-agent-extension",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "Gemini CLI extension for ADK Agent interaction",
   "type": "module",
   "main": "dist/example.js",
