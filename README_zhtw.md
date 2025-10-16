@@ -1,0 +1,89 @@
+# Google ADK Agent Extension
+
+這是一個 Gemini CLI 擴充功能，用於與 ADK (Agent Development Kit) 代理程式進行互動。
+
+## 功能
+
+### MCP 伺服器工具
+
+此擴充功能提供一個 MCP 伺服器，其中包含以下工具：
+
+*   `list_adks`: 獲取可用的 ADK 伺服器列表。
+*   `list_adk_agents`: 從指定的 ADK 伺服器獲取可用的代理程式列表。
+*   `create_session`: 為指定的代理程式建立一個新的會話。
+*   `send_message_to_agent`: 向代理程式會話發送訊息並獲取結果。
+
+### 自訂指令
+
+此擴充功能提供以下自訂指令：
+
+*   `/adk-ext:list_adks`: 列出可用 ADK 伺服器的捷徑。
+*   `/adk-ext:list_adk_agent`: 從指定的 ADK 伺服器列出可用代理程式的捷徑。
+*   `/adk-ext:agent_chat`: 以類似聊天的​​方式與代理程式互動的指令。
+
+## 安裝
+
+您可以從其 Git 儲存庫安裝此擴充功能：
+
+```bash
+gemini extensions install <repository-url>
+```
+
+## 使用方式
+
+安裝後，您可以在 Gemini CLI 會話中使用自訂指令。
+
+**範例：**
+
+1.  列出可用的 ADK：
+    ```
+    /adk-ext:list_adks
+    ```
+
+2.  列出 ADK 的代理程式：
+    ```
+    /adk-ext:list_adk_agent
+    ```
+    （系統將提示您輸入 ADK 伺服器 URL）
+
+3.  與代理程式聊天：
+    ```
+    /adk-ext:agent_chat
+    ```
+    （系統將提示您輸入必要的參數）
+
+您也可以在提示中直接使用 MCP 伺服器提供的工具。
+
+## 開發
+
+### 先決條件
+
+*   Node.js
+*   TypeScript
+*   Gemini CLI
+
+### 設定
+
+1.  **克隆儲存庫：**
+    ```bash
+    git clone <repository-url>
+    cd google-adk-agent-extension
+    ```
+
+2.  **安裝相依套件：**
+    ```bash
+    npm install
+    ```
+
+3.  **建置擴充功能：**
+    ```bash
+    npm run build
+    ```
+
+4.  **連結以進行本機開發：**
+    ```bash
+    gemini extensions link .
+    ```
+
+連結後，重新啟動您的 Gemini CLI 會話以使用擴充功能的本機版本。
+

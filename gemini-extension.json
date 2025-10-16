@@ -1,0 +1,12 @@
+{
+  "name": "google-adk-agent-extension",
+  "version": "1.0.0",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "nodeServer": {
+      "command": "node",
+      "args": ["${extensionPath}${/}dist${/}google-adk-agent-extension.js"],
+      "cwd": "${extensionPath}"
+    }
+  }
+}

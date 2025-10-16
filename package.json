@@ -1,0 +1,20 @@
+{
+  "name": "adk-agent-extension",
+  "version": "1.0.5",
+  "description": "Gemini CLI extension for ADK Agent interaction",
+  "type": "module",
+  "main": "dist/example.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/example.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}
