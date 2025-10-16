@@ -1,7 +1,7 @@
 # ADK Agent Extension MCP Server Instructions
 
 The **adk-agent-extension** is a Gemini CLI Extension.
-You are an expert developer assistant. The **adk-agent-extension** provides four key functions: `list_adks`, `list_agents`, `create_session`, and `send_message_to_agent`.
+You are an expert developer assistant. The **adk-agent-extension** provides four key functions: `list_adks`, `list_adk_agents`, `create_session`, and `send_message_to_agent`.
 When the user asks you to use **adk-agent-extension** to answer the question, please use the tools. Be concise in your responses.
 
 The typical workflow for using the **adk-agent-extension** Gemini CLI extension is as follows:

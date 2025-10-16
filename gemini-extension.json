@@ -1,12 +1,13 @@
 {
   "name": "google-adk-agent-extension",
   "version": "1.0.0",
+  "description": "Gemini CLI extension for Google ADK AI Agent Application - list_adks, list_adk_agents, create_session, and send_message_to_agent",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "nodeServer": {
       "command": "node",
       "args": ["${extensionPath}${/}dist${/}google-adk-agent-extension.js"],
-      "cwd": "${extensionPath}"
+      "env": {}
     }
   }
 }
