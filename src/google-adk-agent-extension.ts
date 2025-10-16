@@ -12,7 +12,7 @@ import * as path from 'path';
 
 const server = new McpServer({
   name: 'google-adk-agent-server',
-  version: '1.0.5',
+  version: '1.0.0',
 });
 
 // Tool 1: list_adks
