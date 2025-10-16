@@ -54,6 +54,27 @@ After installation, you can use the custom commands in your Gemini CLI session.
 
 You can also directly use the tools provided by the MCP server in your prompts.
 
+## Configuration
+
+### `adk_agent_list.json`
+
+This file is used to configure the list of available ADK agents. It should be placed in the root of the extension directory.
+
+The file should contain a JSON object with an `agents` key, which is an array of agent objects. Each agent object should have a `name` and a `url`.
+
+**Example `adk_agent_list.json`:**
+
+```json
+{
+  "agents": [
+    {
+      "name": "your-agent-name",
+      "url": "your-agent-url"
+    }
+  ]
+}
+```
+
 ## Development
 
 ### Prerequisites

@@ -54,6 +54,27 @@ gemini extensions install <repository-url>
 
 您也可以在提示中直接使用 MCP 伺服器提供的工具。
 
+## 設定
+
+### `adk_agent_list.json`
+
+此檔案用於設定可用的 ADK 代理程式列表。它應該放在擴充功能的根目錄中。
+
+該檔案應包含一個帶有 `agents` 鍵的 JSON 物件，該鍵是一個代理程式物件的陣列。每個代理程式物件都應具有 `name` 和 `url`。
+
+**`adk_agent_list.json` 範例：**
+
+```json
+{
+  "agents": [
+    {
+      "name": "your-agent-name",
+      "url": "your-agent-url"
+    }
+  ]
+}
+```
+
 ## 開發
 
 ### 先決條件
