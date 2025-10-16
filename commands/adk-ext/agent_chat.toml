@@ -3,8 +3,8 @@ Step 1:
 list_adks
 
 Step 2:
-請根據 list_adks 列出來的 adk list 挑選一個跟  `{{args}}` 最為類似的，然後再使用 list_adk_agent
+Please select the most similar ADK from the adk list provided by list_adks based on `{{args}}`, and then use list_adk_agent
 
 Step 3:
-請根據 list_adk_agent 列出來的 agent list 挑選一個跟 `{{args}}` 最為類似的，然後再使用 create_session 初始化對話，取得 session_id，然後進行 send_message_to_agent
+Please select the most similar agent from the agent list provided by list_adk_agent based on `{{args}}`, then use create_session to initialize the conversation, get the session_id, and then send_message_to_agent
 """
