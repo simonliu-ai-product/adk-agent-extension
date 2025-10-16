@@ -6,7 +6,8 @@
   "main": "dist/example.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/example.js"
+    "start": "node dist/example.js",
+    "package": "node scripts/package.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.0",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "archiver": "^7.0.1",
+    "minimist": "^1.2.8"
   }
 }
