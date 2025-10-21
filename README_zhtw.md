@@ -26,7 +26,7 @@
 您可以從其 Git 儲存庫安裝此擴充功能：
 
 ```bash
-gemini extensions install <repository-url>
+gemini extensions install https://github.com/simonliu-ai-product/adk-agent-extension
 ```
 
 ## 使用方式

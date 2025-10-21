@@ -26,7 +26,7 @@ This extension provides the following custom commands:
 You can install this extension from its Git repository:
 
 ```bash
-gemini extensions install <repository-url>
+gemini extensions install https://github.com/simonliu-ai-product/adk-agent-extension
 ```
 
 ## Usage
