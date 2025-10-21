@@ -1,0 +1,12 @@
+prompt = """
+# Step 1: Start the session
+# Call manage_chat_session with action: 'start' and get the conversation_id. The user's arguments `{{args}}` will contain the adk server url and agent name.
+
+# Step 2: Start a loop
+# Prompt the user for input. If the input is '/exit', go to Step 3.
+# Otherwise, call manage_chat_session with action: 'message', the conversation_id, and the user's message.
+# Display the response and repeat the loop.
+
+# Step 3: End the session
+# Call manage_chat_session with action: 'end' and the conversation_id.
+"""

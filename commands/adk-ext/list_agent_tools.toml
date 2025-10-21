@@ -1,0 +1,3 @@
+prompt = """
+Use the `list_agent_tools` tool to list the tools of an ADK agent. The user's arguments `{{args}}` will contain the agent path.
+"""

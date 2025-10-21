@@ -1,0 +1,3 @@
+prompt = """
+Use the `visualize_agent_system` tool to generate a Mermaid diagram of a multi-agent system. The user's arguments `{{args}}` will contain the agent path.
+"""

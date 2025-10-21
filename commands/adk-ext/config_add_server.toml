@@ -1,0 +1,3 @@
+prompt = """
+Use the `add_adk_server` tool to add a new ADK server to the configuration. The user's arguments `{{args}}` will contain the server name and URL.
+"""
