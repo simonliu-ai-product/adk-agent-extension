@@ -1,6 +1,7 @@
 # Google ADK Agent Extension
 
 這是一個 Gemini CLI 擴充功能，用於與 ADK (Agent Development Kit) 代理程式進行互動。
+
 感謝 [APMIC](https://www.apmic.ai/) 提供機會協助此專案
 
 ## 功能
