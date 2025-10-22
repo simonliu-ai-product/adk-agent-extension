@@ -1,6 +1,8 @@
 # Google ADK Agent Extension
 
 This is a Gemini CLI extension for interacting with ADK (Agent Development Kit) agents.
+Thanks [APMIC](https://www.apmic.ai/) give me time to do the Open-Source Project.
+
 
 ## Features
 
@@ -108,3 +110,14 @@ The file should contain a JSON object with an `agents` key, which is an array of
 
 After linking, restart your Gemini CLI session to use the local version of the extension.
 
+## About the Author
+Simon Liu
+APMIC MLOps Engineer x Google Developer Expert (GDE) in AI
+
+A technology enthusiast in the field of artificial intelligence solutions, focusing on assisting enterprises in implementing generative AI, MLOps, and Large Language Model (LLM) technologies to drive digital transformation and practical technological implementation.
+
+Currently also a Google Developer Expert (GDE) in the GenAI field, actively participating in technology communities, promoting the application and development of AI technology through technical articles, speeches, and practical experience sharing. To date, he has published over a hundred technical articles on platforms like Medium, covering topics such as generative AI, RAG, and AI Agents, and has served as a speaker at numerous technical seminars, sharing practical applications of AI and generative AI.
+
+Related Links:
+APMIC Official Website: https://www.apmic.ai/
+Personal Social Media Links: https://simonliuyuwei.my.canva.site/link-in-bio

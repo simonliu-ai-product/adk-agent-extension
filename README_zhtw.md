@@ -1,6 +1,7 @@
 # Google ADK Agent Extension
 
 這是一個 Gemini CLI 擴充功能，用於與 ADK (Agent Development Kit) 代理程式進行互動。
+感謝 [APMIC](https://www.apmic.ai/) 提供機會協助此專案
 
 ## 功能
 
@@ -108,3 +109,14 @@ gemini extensions install https://github.com/simonliu-ai-product/adk-agent-exten
 
 連結後，重新啟動您的 Gemini CLI 會話以使用擴充功能的本機版本。
 
+## 關於作者
+Simon Liu
+APMIC MLOps 工程師 x Google 人工智慧開發者專家 (GDE)
+
+人工智慧解決方案領域的技術愛好者，專注於協助企業落地生成式人工智慧 (Generative AI)、MLOps 和大型語言模型 (LLM) 技術，推動數位轉型和實際技術落地。
+
+目前也是 AI 領域的 Google 開發者專家 (GDE)，積極參與技術社區，透過技術文章、演講和實踐經驗分享，推動人工智慧技術的應用和發展。迄今為止，他在 Medium 等平台上發表了百餘篇技術文章，涵蓋生成式人工智慧 (Generative AI)、RAG 和 AI Agents 等主題，並多次在技術研討會上擔任演講嘉賓，分享人工智慧和生成式人工智慧的實際應用。
+
+相關連結：
+APMIC 官網：https://www.apmic.ai/
+個人社群媒體連結：https://simonliuyuwei.my.canva.site/link-in-bio
