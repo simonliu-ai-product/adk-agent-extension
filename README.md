@@ -2,7 +2,7 @@
 
 This is a Gemini CLI extension for interacting with ADK (Agent Development Kit) agents.
 
-Thanks [APMIC](https://www.apmic.ai/) give me time to do the Open-Source Project.
+Thanks [APMIC](https://www.apmic.ai/) give me the support to finish the Open-Source Project.
 
 
 ## Features
