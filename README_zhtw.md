@@ -2,8 +2,6 @@
 
 這是一個 Gemini CLI 擴充功能，用於與 ADK (Agent Development Kit) 代理程式進行互動。
 
-感謝 [APMIC](https://www.apmic.ai/) 提供資源和協助，讓我能夠完成此專案
-
 ## 功能
 
 ### MCP 伺服器工具
@@ -120,6 +118,11 @@ gemini extensions install https://github.com/simonliu-ai-product/adk-agent-exten
     ```
 
 連結後，重新啟動您的 Gemini CLI 會話以使用擴充功能的本機版本。
+
+## 感謝
+
+感謝 [APMIC](https://www.apmic.ai/) 提供資源和協助，讓我能夠完成此專案
+感謝 [Thomas Chong](https://github.com/thomas-chong) 對此專案的貢獻。
 
 ## 關於作者
 Simon Liu

@@ -2,9 +2,6 @@
 
 This is a Gemini CLI extension for interacting with ADK (Agent Development Kit) agents.
 
-Thanks [APMIC](https://www.apmic.ai/) give me the support to finish the Open-Source Project.
-
-
 ## Features
 
 ### MCP Server Tools
@@ -125,6 +122,11 @@ The file should contain a JSON object with an `agents` key, which is an array of
     ```
 
 After linking, restart your Gemini CLI session to use the local version of the extension.
+
+## Acknowledgement
+
+Thanks [APMIC](https://www.apmic.ai/) give me the support to finish the Open-Source Project.
+Thanks to [Thomas Chong](https://github.com/thomas-chong) for his contributions to this project.
 
 ## About the Author
 Simon Liu
