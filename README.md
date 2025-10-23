@@ -23,6 +23,16 @@ This extension provides the following custom commands:
 *   `/adk-ext:list_adks`: A shortcut to list available ADK servers.
 *   `/adk-ext:list_adk_agent`: A shortcut to list available agents from a specific ADK server.
 *   `/adk-ext:agent_chat`: A command to interact with an agent in a chat-like manner.
+*   `/adk-ext:config_add_server`: Add a new ADK server configuration.
+*   `/adk-ext:config_list_servers`: List all ADK server configurations.
+*   `/adk-ext:config_remove_server`: Remove an ADK server configuration.
+*   `/adk-ext:create_agent`: Create a new agent.
+*   `/adk-ext:deploy_agent`: Deploy an agent.
+*   `/adk-ext:evaluate_agent`: Evaluate an agent.
+*   `/adk-ext:interactive_chat`: A command to interact with an agent in a chat-like manner.
+*   `/adk-ext:list_agent_tools`: List all tools for an agent.
+*   `/adk-ext:scan_safety`: Scan for safety issues.
+*   `/adk-ext:visualize`: Visualize the agent system schema.
 
 ## Installation
 
@@ -35,6 +45,7 @@ gemini extensions install https://github.com/simonliu-ai-product/adk-agent-exten
 ## Usage
 
 After installation, you can use the custom commands in your Gemini CLI session.
+For more detailed usage instructions and examples, please refer to the [Usage Guide](doc/en/usage.md).
 
 **Example:**
 
@@ -107,6 +118,10 @@ The file should contain a JSON object with an `agents` key, which is an array of
 4.  **Link for local development:**
     ```bash
     gemini extensions link .
+    ```
+    or
+    ```bash
+    gemini extensions install .
     ```
 
 After linking, restart your Gemini CLI session to use the local version of the extension.

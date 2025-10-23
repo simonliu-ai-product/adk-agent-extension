@@ -22,6 +22,16 @@
 *   `/adk-ext:list_adks`: 列出可用 ADK 伺服器的捷徑。
 *   `/adk-ext:list_adk_agent`: 從指定的 ADK 伺服器列出可用代理程式的捷徑。
 *   `/adk-ext:agent_chat`: 以類似聊天的​​方式與代理程式互動的指令。
+*   `/adk-ext:config_add_server`: 新增 ADK 伺服器設定。
+*   `/adk-ext:config_list_servers`: 列出所有 ADK 伺服器設定。
+*   `/adk-ext:config_remove_server`: 移除 ADK 伺服器設定。
+*   `/adk-ext:create_agent`: 建立新的代理程式。
+*   `/adk-ext:deploy_agent`: 部署代理程式。
+*   `/adk-ext:evaluate_agent`: 評估代理程式。
+*   `/adk-ext:interactive_chat`: 以互動模式與代理程式聊天。
+*   `/adk-ext:list_agent_tools`: 列出代理程式的所有工具。
+*   `/adk-ext:scan_safety`: 掃描安全問題。
+*   `/adk-ext:visualize`: 視覺化代理程式系統結構。
 
 ## 安裝
 
@@ -34,6 +44,7 @@ gemini extensions install https://github.com/simonliu-ai-product/adk-agent-exten
 ## 使用方式
 
 安裝後，您可以在 Gemini CLI 會話中使用自訂指令。
+如需更詳細的使用說明和範例，請參閱 [使用手冊](doc/zhtw/usage.md)。
 
 **範例：**
 

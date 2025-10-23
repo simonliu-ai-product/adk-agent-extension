@@ -1,8 +1,3 @@
-/**
- * @license
- * Copyright 2025 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
@@ -69,17 +64,16 @@ server.registerTool(
   }
 );
 
-// Tool 2: list_adk_agents
-const listAdkAgentsSchema = z.object({
-  adk_server_url: z.string().url().describe('The URL of the ADK server.'),
-});
+// Tool 2: list_agents
 server.registerTool(
   'list_adk_agents',
   {
     description: 'Fetches a list of available agents from a specific ADK server.',
-    inputSchema: listAdkAgentsSchema.shape,
+    inputSchema: z.object({
+      adk_server_url: z.string().url().describe('The URL of the ADK server.'),
+    }).shape,
   },
-  async (input: z.infer<typeof listAdkAgentsSchema>) => {
+  async (input) => {
     try {
       const url = `${input.adk_server_url}/list-apps`;
       const apiResponse = await fetch(url);
@@ -100,18 +94,17 @@ server.registerTool(
 );
 
 // Tool 3: create_session
-const createSessionSchema = z.object({
-  adk_server_url: z.string().url().describe('The URL of the ADK server.'),
-  agent_name: z.string().describe('The name of the agent.'),
-});
 server.registerTool(
   'create_session',
   {
     description:
       'Creates a new session for a specified agent on a specific ADK server.',
-    inputSchema: createSessionSchema.shape,
+    inputSchema: z.object({
+      adk_server_url: z.string().url().describe('The URL of the ADK server.'),
+      agent_name: z.string().describe('The name of the agent.'),
+    }).shape,
   },
-  async (input: z.infer<typeof createSessionSchema>) => {
+  async (input) => {
     try {
       const apiResponse = await fetch(
         `${input.adk_server_url}/apps/${input.agent_name}/users/gemini-cli/sessions`,
@@ -140,19 +133,18 @@ server.registerTool(
 );
 
 // Tool 4: send_message_to_agent
-const sendMessageSchema = z.object({
-  adk_server_url: z.string().url().describe('The URL of the ADK server.'),
-  agent_name: z.string().describe('The name of the agent.'),
-  session_id: z.string().describe('The session ID to use.'),
-  message: z.string().describe('The user\'s message to the agent.'),
-});
 server.registerTool(
   'send_message_to_agent',
   {
     description: 'Sends a message to an agent session and gets the result.',
-    inputSchema: sendMessageSchema.shape,
+    inputSchema: z.object({
+      adk_server_url: z.string().url().describe('The URL of the ADK server.'),
+      agent_name: z.string().describe('The name of the agent.'),
+      session_id: z.string().describe('The session ID to use.'),
+      message: z.string().describe('The user\'s message to the agent.'),
+    }).shape,
   },
-  async (input: z.infer<typeof sendMessageSchema>) => {
+  async (input) => {
     try {
       const apiResponse = await fetch(`${input.adk_server_url}/run_sse`, {
         method: 'POST',
@@ -203,76 +195,6 @@ server.registerTool(
   }
 );
 
-const streamMessageSchema = z.object({
-  adk_server_url: z.string().url(),
-  agent_name: z.string(),
-  session_id: z.string(),
-  message: z.string(),
-});
-
-// Tool 5: stream_message_to_agent
-server.registerTool(
-  'stream_message_to_agent',
-  {
-    description: 'Sends a message to an agent and streams the response.',
-    inputSchema: streamMessageSchema.shape,
-  },
-  async (input: z.infer<typeof streamMessageSchema>) => {
-    try {
-      const response = await fetch(`${input.adk_server_url}/run_sse`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          appName: input.agent_name,
-          userId: 'gemini-cli',
-          sessionId: input.session_id,
-          newMessage: { parts: [{ text: input.message }], role: 'user' },
-          streaming: true, // Enable streaming
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`);
-      }
-
-      if (!response.body) {
-        throw new Error('Response body is null');
-      }
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let fullResponse = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split('\n');
-
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const jsonStr = line.substring(6);
-            try {
-              const data = JSON.parse(jsonStr);
-              if (data.content && data.content.parts && data.content.parts[0].text) {
-                fullResponse += data.content.parts[0].text;
-              }
-            } catch (e) {
-              // Ignore lines that are not valid JSON
-            }
-          }
-        }
-      }
-
-      return { content: [{ type: 'text', text: fullResponse }] };
-    } catch (error) {
-      const message = error instanceof Error ? error.message : 'Unknown error';
-      return { content: [{ type: 'text', text: `Error: ${message}` }] };
-    }
-  },
-);
-
 const createAgentSchema = z.object({
   agent_name: z.string(),
   directory_path: z.string(),
@@ -290,7 +212,7 @@ server.registerTool(
       const agentDir = path.join(input.directory_path, input.agent_name);
       fs.mkdirSync(agentDir, { recursive: true });
 
-      const agentPyContent = `from google.adk.agents import Agent\nfrom google.adk.tools import google_search\n\nroot_agent = Agent(\n    name="${input.agent_name}",\n    model="gemini-1.5-flash",\n    instruction="You are a helpful assistant.",\n    tools=[google_search]
+      const agentPyContent = `from google.adk.agents import Agent\nfrom google.adk.tools import google_search\n\nroot_agent = Agent(\n    name="${input.agent_name}",\n    model="gemini-2.5-flash",\n    instruction="You are a helpful assistant.",\n    tools=[google_search]
 )
 `;
       fs.writeFileSync(path.join(agentDir, 'agent.py'), agentPyContent);

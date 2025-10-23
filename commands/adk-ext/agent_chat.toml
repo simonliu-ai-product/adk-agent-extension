@@ -1,9 +1,9 @@
 prompt = """
 Step 1:
-list_adks
+Use the `list_adks` tool to fetch the list of available ADK servers.
 
 Step 2:
-Please select the most similar ADK from the adk list provided by list_adks based on `{{args}}`, and then use list_adk_agent
+Please select the most similar ADK from the adk list provided by list_adks based on `{{args}}`, and then use the list_adk_agent tool to fetch the list of available agent.
 
 Step 3:
 Please select the most similar agent from the agent list provided by list_adk_agent based on `{{args}}`, then use create_session to initialize the conversation, get the session_id, and then stream_message_to_agent
