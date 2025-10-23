@@ -1,0 +1,3 @@
+prompt = """
+Use the `remove_adk_server` tool to remove an ADK server from the configuration. The user's arguments `{{args}}` will contain the server name.
+"""
