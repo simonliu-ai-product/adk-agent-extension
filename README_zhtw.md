@@ -121,8 +121,8 @@ gemini extensions install https://github.com/simonliu-ai-product/adk-agent-exten
 
 ## 感謝
 
-感謝 [APMIC](https://www.apmic.ai/) 提供資源和協助，讓我能夠完成此專案
-感謝 [Thomas Chong](https://github.com/thomas-chong) 對此專案的貢獻。
+- 感謝 [APMIC](https://www.apmic.ai/) 提供資源和協助，讓我能夠完成此專案
+- 感謝 [Thomas Chong](https://github.com/thomas-chong) 對此專案的貢獻。
 
 ## 關於作者
 Simon Liu

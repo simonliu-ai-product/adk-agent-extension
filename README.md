@@ -125,8 +125,8 @@ After linking, restart your Gemini CLI session to use the local version of the e
 
 ## Acknowledgement
 
-Thanks [APMIC](https://www.apmic.ai/) give me the support to finish the Open-Source Project.
-Thanks to [Thomas Chong](https://github.com/thomas-chong) for his contributions to this project.
+- Thanks [APMIC](https://www.apmic.ai/) give me the support to finish the Open-Source Project.
+- Thanks to [Thomas Chong](https://github.com/thomas-chong) for his contributions to this project.
 
 ## About the Author
 Simon Liu
