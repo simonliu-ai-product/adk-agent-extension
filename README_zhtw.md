@@ -65,6 +65,13 @@ gemini extensions install https://github.com/simonliu-ai-product/adk-agent-exten
 
 您也可以在提示中直接使用 MCP 伺服器提供的工具。
 
+## 待辦事項
+
+*   [ ] 加入示範影片，整理更完整的文件。
+*   [ ] 透過 LLM 模型來創建 ADK Agent Tools，並且放入 ADK 專案設定。
+*   [ ] 透過 LLM 模型來串接 OpenAPI Tools，並且放入 ADK 專案設定。
+*   [ ] 透過 LLM 模型來串接 MCP Server，並且放入 ADK 專案設定。
+
 ## 設定
 
 ### `adk_agent_list.json`

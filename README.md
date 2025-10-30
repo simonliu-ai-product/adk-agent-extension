@@ -65,6 +65,13 @@ For more detailed usage instructions and examples, please refer to the [Usage Gu
 
 You can also directly use the tools provided by the MCP server in your prompts.
 
+## TODO List
+
+*   [ ] Add a demo video and organize more complete documentation.
+*   [ ] Create ADK Agent Tools via LLM model and integrate into ADK project settings.
+*   [ ] Integrate OpenAPI Tools via LLM model and integrate into ADK project settings.
+*   [ ] Integrate MCP Server via LLM model and integrate into ADK project settings.
+
 ## Configuration
 
 ### `adk_agent_list.json`
